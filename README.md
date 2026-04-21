@@ -1,54 +1,77 @@
-# Shiny Hunting Tracker
+# Pokemon Lookup
 
 CS481 Mobile Programming - Spring 2026  
 **Team 2**
 
 ## Project Description
 
-An Android application for tracking Pokémon shiny hunts across multiple game titles. The app provides real-time encounter counting, hunt timing, and comprehensive collection management for shiny Pokémon.
+A simple Android app that allows users to search for Pokemon by name and view their information including sprite, types, and stats. Built using MVVM architecture with Kotlin and PokéAPI integration.
 
 ## Features
 
-- **Encounter Counter:** Track hunt attempts with real-time counting
-- **Timer:** Monitor time spent on each hunt
-- **Collection Log:** Save successful hunts with detailed metadata
-- **Statistics:** View hunting history and success rates
-- **Multi-Game Support:** Compatible with various Pokémon titles
+- Search Pokemon by name
+- Display Pokemon sprite image
+- Show Pokemon types (Fire, Water, Electric, etc.)
+- Show six core stats (HP, Attack, Defense, Special Attack, Special Defense, Speed)
+- Loading indicators and error handling
 
-## Target Users
+## Tech Stack
 
-- Dedicated shiny hunters in the Pokémon community
-- Casual players exploring shiny hunting
-- Players looking to organize their shiny collection
-
-## Technical Stack
-
-- **Platform:** Android (API 26+)
 - **Language:** Kotlin
-- **Architecture:** MVVM (Model-View-ViewModel)
-- **Database:** Room Persistence Library
-- **API:** PokéAPI for Pokémon sprites and data
-- **Async:** Kotlin Coroutines
+- **Min SDK:** API 26 (Android 8.0)
+- **Target SDK:** API 36
+- **Compile SDK:** API 36
+- **Architecture:** MVVM
+- **API:** PokéAPI (https://pokeapi.co)
+
+## Libraries
+
+- Retrofit 2.9.0 - HTTP client for API calls
+- Gson 2.10.1 - JSON parsing
+- Kotlin Coroutines 1.7.3 - Asynchronous operations
+- ViewModel & LiveData 2.6.2 - MVVM architecture
+- Coil 2.5.0 - Image loading
+- Material Design 1.11.0 - UI components
 
 ## Team Members
 
-- [Name] - UI/UX Lead
-- [Name] - Database Lead
-- [Name] - API Integration Lead
-- [Name] - Testing Lead
+- Member 1: Project Setup & Infrastructure
+- Member 2: API Integration
+- Member 3: Data Models
+- Member 4: Repository Layer
+- Member 5: Testing & QA
 
-## Project Timeline
+## Project Structure
 
-- **Week 1 (3/29-4/4):** Planning, design, setup
-- **Week 2 (4/5-4/11):** Counter, timer, database implementation
-- **Week 3 (4/12-4/18):** API integration, collection screen
-- **Week 4 (4/19-4/25):** Stats page, UI polish
-- **Week 5 (4/26-5/2):** Testing, demo video, presentation
+app/src/main/java/com/team2/pokemonlookup/
+├── data/
+│   ├── model/       # Data classes (DTOs)
+│   ├── remote/      # Retrofit API service
+│   └── repository/  # Repository layer
+├── ui/              # UI screens and ViewModels
+└── utils/           # Helper utilities
+
+## Current Status
+
+**Sprint 3:** Foundation layer - project setup, API integration, data models
 
 ## Setup Instructions
 
-*To be added once development begins*
+1. Clone the repository:
+```bash
+   git clone https://github.com/denewyear/poke-tracks.git
+```
+2. Checkout development branch:
+```bash
+   cd poke-tracks
+   git checkout development
+```
+3. Open in Android Studio
+4. Wait for Gradle sync to complete
+5. Build and run on emulator or device
 
-## License
+## API Information
 
-Educational project for CS481 - Spring 2026
+Using PokéAPI v2: https://pokeapi.co/api/v2/
+
+Primary endpoint: `GET /pokemon/{name}` - Fetch Pokemon by name or ID
