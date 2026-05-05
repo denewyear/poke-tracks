@@ -77,4 +77,7 @@ dependencies {
 
     // Material Design
     implementation("com.google.android.material:material:1.11.0")
+
+    // ConstraintLayout for activity_main.xml
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }
