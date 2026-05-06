@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Pokemon Lookup</string>
+    <string name="app_name">Pokémon Lookup</string>
+    <string name="search_hint">Search a Pokémon by name or #</string>
+    <string name="search_button">Search</string>
+    <string name="empty_title">Who\'s that Pokémon?</string>
+    <string name="empty_subtitle">Type a name (or number) above to begin.</string>
+    <string name="base_stats">Base stats</string>
+    <string name="stat_hp">HP</string>
+    <string name="stat_attack">Attack</string>
+    <string name="stat_defense">Defense</string>
+    <string name="stat_sp_atk">Sp. Atk</string>
+    <string name="stat_sp_def">Sp. Def</string>
+    <string name="stat_speed">Speed</string>
 </resources>
